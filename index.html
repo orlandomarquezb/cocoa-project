@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Venezuela - Mejoramiento Varietal Cacao Sostenible</title>
+    <title>Proyecto Venezuela - Mejoramiento Varietal Cacao Sostenible | Orlando Márquez</title>
+    <meta name="description" content="Proyecto de investigación científica para mejoramiento varietal de cacao sostenible en Venezuela. Colaboración internacional ICCO/CIRAD/UCV.">
     <style>
         * {
             margin: 0;
@@ -76,6 +77,11 @@
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
         }
 
         .stat-number {
@@ -162,19 +168,40 @@
             font-weight: bold;
         }
 
-        /* Image Placeholders */
-        .image-placeholder {
-            background: #f8f9fa;
-            border: 2px dashed #ddd;
+        /* Project Images */
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
             border-radius: 8px;
-            padding: 40px 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover {
+            transform: scale(1.02);
+        }
+
+        .image-container {
             text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
             color: #666;
+            margin-top: 10px;
             font-style: italic;
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+
+        /* Plantation Images */
+        .plantation-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         /* Highlight Box */
@@ -301,6 +328,10 @@
             .timeline-item::before {
                 left: 6px;
             }
+
+            .project-image, .plantation-image {
+                height: 200px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -310,6 +341,36 @@
             
             .header h1 {
                 font-size: 1.8rem;
+            }
+
+            .project-image, .plantation-image {
+                height: 180px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .header {
+                background: white !important;
+                color: #333 !important;
+                padding: 30px 0;
+            }
+            
+            .badge {
+                background: #f0f0f0 !important;
+                color: #333 !important;
+            }
+            
+            .btn {
+                display: none;
+            }
+            
+            .section {
+                padding: 30px 0;
+            }
+
+            .project-image, .plantation-image {
+                height: 150px;
             }
         }
     </style>
@@ -365,8 +426,9 @@
                     <p><strong>Contexto:</strong> Venezuela es conocida por su cacao de alta calidad, atribuible a la amplia diversidad genética del país. Su potencial de producción es aún más impresionante considerando que el cacao autóctono venezolano tiene una calidad organoléptica superior.</p>
                 </div>
                 
-                <div class="image-placeholder">
-                    [INSERTAR IMAGEN: Orlando Márquez recorrido plantación cacao Criollo, Sur del Lago, Venezuela]
+                <div class="image-container">
+                    <img src="https://github.com/orlandomarquezb/cocoa-project/blob/2f49af2810a54b062c7cc52468cb917a587106b1/Venezuela%20project%201.png?raw=true" alt="Orlando Márquez en plantación de cacao criollo" class="project-image">
+                    <p class="image-caption">Orlando Márquez - Trabajo de campo en plantaciones de cacao criollo, Venezuela</p>
                 </div>
             </div>
         </div>
@@ -391,8 +453,9 @@
                     <p>Sierra de Perijá, Estado Zulia - zona deshabitada cerca de afluente. Plantas propagadas por semilla, ahora certificadas genéticamente.</p>
                 </div>
                 
-                <div class="image-placeholder">
-                    [INSERTAR IMAGEN: Características morfológicas frutos y semillas árbol Márquez-1]
+                <div class="image-container">
+                    <img src="https://github.com/orlandomarquezb/cocoa-project/blob/2f49af2810a54b062c7cc52468cb917a587106b1/Venezuela%20Project%202.png?raw=true" alt="Estudio genético Márquez-1" class="project-image">
+                    <p class="image-caption">Análisis genético molecular - Características del genotipo Márquez-1</p>
                 </div>
             </div>
             
@@ -452,9 +515,7 @@
             <div class="three-column">
                 <div class="card">
                     <h3>🌱 La Sabana</h3>
-                    <div class="image-placeholder" style="margin: 15px 0; height: 150px;">
-                        [IMAGEN: Plantación La Sabana]
-                    </div>
+                    <img src="https://github.com/orlandomarquezb/cocoa-project/blob/2f49af2810a54b062c7cc52468cb917a587106b1/La%20Sabana.png?raw=true" alt="Plantación La Sabana" class="plantation-image">
                     <ul>
                         <li><strong>Área:</strong> 390,820 m²</li>
                         <li><strong>Árboles:</strong> 500 estimados</li>
@@ -465,9 +526,7 @@
                 
                 <div class="card">
                     <h3>🌳 Los Laureles</h3>
-                    <div class="image-placeholder" style="margin: 15px 0; height: 150px;">
-                        [IMAGEN: Los Laureles Cooperativa]
-                    </div>
+                    <img src="https://github.com/orlandomarquezb/cocoa-project/blob/2f49af2810a54b062c7cc52468cb917a587106b1/Los%20Laureles.png?raw=true" alt="Plantación Los Laureles" class="plantation-image">
                     <ul>
                         <li><strong>Área:</strong> 425,972 m²</li>
                         <li><strong>Árboles:</strong> 3,000 estimados</li>
@@ -478,9 +537,7 @@
                 
                 <div class="card">
                     <h3>🌿 Nuevo Amanecer</h3>
-                    <div class="image-placeholder" style="margin: 15px 0; height: 150px;">
-                        [IMAGEN: Nuevo Amanecer]
-                    </div>
+                    <img src="https://github.com/orlandomarquezb/cocoa-project/blob/2f49af2810a54b062c7cc52468cb917a587106b1/Nuevo%20Amanecer.png?raw=true" alt="Plantación Nuevo Amanecer" class="plantation-image">
                     <ul>
                         <li><strong>Área:</strong> 400,017 m²</li>
                         <li><strong>Árboles:</strong> 2,500 estimados</li>
@@ -492,29 +549,98 @@
         </div>
     </section>
 
-    <!-- CRONOLOGÍA -->
+    <!-- CENTRO POST-COSECHA -->
     <section class="section">
+        <div class="container">
+            <h2 class="section-title">Centro Post-Cosecha y Recursos</h2>
+            <div class="two-column">
+                <div class="card">
+                    <h3>🏭 Infraestructura Técnica</h3>
+                    <ul>
+                        <li>Tolvas de fermentación controlada</li>
+                        <li>Plataformas de secado optimizadas</li>
+                        <li>Maquinaria producción pasta de cacao</li>
+                        <li>Sistema de grúa para secado</li>
+                        <li>Área de almacenamiento climatizada</li>
+                        <li>Laboratorio evaluación sensorial</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: 20px;">📍 Ubicación:</h4>
+                    <p>Sur América, San Francisco, Estado Zulia, Venezuela</p>
+                    
+                    <h4 style="margin-top: 15px;">🎯 Propósito:</h4>
+                    <p>Garantizar calidad uniforme y desarrollar perfiles aromáticos únicos del cacao criollo venezolano.</p>
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://github.com/orlandomarquezb/cocoa-project/blob/2f49af2810a54b062c7cc52468cb917a587106b1/Venezuela%20project%201.png?raw=true" alt="Centro Post-Cosecha" class="project-image">
+                    <p class="image-caption">Centro de Post-Cosecha - Instalaciones de fermentación y secado controlado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRONOLOGÍA -->
+    <section class="section" style="background: #f8f9fa;">
         <div class="container">
             <h2 class="section-title">Cronología de Logros</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h4>2021 - Descubrimiento Científico</h4>
-                    <p>Identificación y certificación genética del genotipo "Márquez-1" con 90% pureza Criollo Porcelana mediante análisis UCV-CIRAD.</p>
+                    <h4>2021 - Descubrimiento Científico Revolucionario</h4>
+                    <p>Identificación y certificación genética del genotipo "Márquez-1" con 90% pureza Criollo Porcelana mediante análisis microsatélites SSR en colaboración UCV-CIRAD. Primer material genético certificado de esta pureza en la región.</p>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>2022 - Colaboración Internacional</h4>
-                    <p>Firma de Material Transfer Agreement con CIRAD Francia para análisis genético avanzado y expansión de estudios varietales.</p>
+                    <h4>2022 - Formalización Colaboración Internacional</h4>
+                    <p>Firma de Material Transfer Agreement con CIRAD Francia para análisis genético avanzado y expansión de estudios varietales. Establecimiento de protocolos de investigación internacional.</p>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>2023 - Implementación</h4>
-                    <p>Establecimiento de plantaciones piloto en Sierra de Perijá y construcción centro post-cosecha con tecnología controlada.</p>
+                    <h4>2023 - Implementación en Campo</h4>
+                    <p>Establecimiento de tres plantaciones piloto en Sierra de Perijá y construcción del centro post-cosecha con tecnología controlada. Inicio de propagación por injertos del material genético prometedor.</p>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>2024 - Consolidación</h4>
-                    <p>Integración sistema trazabilidad blockchain y consolidación de 15 productores bajo modelo sostenible.</p>
+                    <h4>2024 - Consolidación y Escalamiento</h4>
+                    <p>Integración del sistema de trazabilidad blockchain con Trazable España, consolidación de 15 productores bajo modelo sostenible, y alcance de objetivos de producción establecidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACTO ODS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Alineación con Objetivos de Desarrollo Sostenible</h2>
+            <div class="three-column">
+                <div class="card">
+                    <h3>🎯 ODS 1: Cero Pobreza</h3>
+                    <ul>
+                        <li><strong>15-20 productores</strong> impactados directamente</li>
+                        <li><strong>67-75% prima</strong> sobre precio mercado local</li>
+                        <li>Ingresos sostenibles para familias rurales</li>
+                        <li>Modelo replicable regionalmente</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>🌱 ODS 2: Hambre Cero</h3>
+                    <ul>
+                        <li><strong>50,000 kg</strong> producción anual objetivo</li>
+                        <li><strong>450 kg/ha</strong> rendimiento mejorado</li>
+                        <li><strong>200 hectáreas</strong> controladas indirectamente</li>
+                        <li>Seguridad alimentaria regional</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>🌍 ODS 13: Acción Climática</h3>
+                    <ul>
+                        <li><strong>2,927 KM</strong> área protegida adyacente</li>
+                        <li>Sistemas agroforestales implementados</li>
+                        <li>Conservación biodiversidad genética</li>
+                        <li>Mitigación cambio climático</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -523,10 +649,10 @@
     <!-- DOWNLOAD -->
     <section class="download-section">
         <div class="container">
-            <h2 style="color: white; margin-bottom: 20px;">Documentación Completa</h2>
+            <h2 style="color: white; margin-bottom: 20px;">Documentación Completa del Proyecto</h2>
             <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9;">
-                Accede al reporte completo del proyecto con todos los detalles técnicos, 
-                análisis genéticos y resultados de campo.
+                Accede al reporte técnico completo con análisis genéticos, resultados de campo, 
+                colaboraciones internacionales y metodología científica detallada.
             </p>
             
             <a href="https://00c1465a-73b4-4cb6-aa7f-dfefedefee99.filesusr.com/ugd/ddadeb_16e7e47c94ce45028e48376998b637b9.pdf" target="_blank" class="btn btn-primary">
@@ -540,6 +666,7 @@
             <div style="margin-top: 40px; font-size: 0.9rem; opacity: 0.8;">
                 <p>Última actualización: Diciembre 2024</p>
                 <p>Proyecto supervisado por ICCO/CIRAD/UCV | © 2024 Cacao Márquez</p>
+                <p>Investigación científica internacional para visa McCormick</p>
             </div>
         </div>
     </section>
